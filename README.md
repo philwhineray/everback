@@ -28,7 +28,7 @@ ls $HOME/Documents/EvernoteBackups/*.enex
 ~~~~
 
 There aren't any options, everything is hardcoded. If you add some
-flexibility or functionality, please send a [PR][#contributing] so others
+flexibility or functionality, please send a [PR](#contributing) so others
 can benefit.
 
 
