@@ -44,7 +44,7 @@ other out with github issues.
 I will accept any Pull Requests that come with a decent commit message
 and don't look like they break anything fundamental.
 
-See COPYING for the full terms of the GPL v3+ under which these sources
+See `LICENSE` for the full terms of the GPL v3+ under which these sources
 are licensed. Individual files contain the following tag instead of the
 full text:
 
