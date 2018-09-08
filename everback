@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Copyright (c) 2015 Philip Whineray
+# SPDX-License-Identifier:  GPL-3.0-or-later
+
+echo "Common errors and solutions:"
+echo "  - Evernote got an error: Can’t get missing value. (-1728)"
+echo "        Just retry (the application has not started in time)"
+echo "  - Expected class name but found identifier. (-2741)"
+echo "        Application deleted itself... (reinstall from .dmg)"
+echo "-------------------------------------------------------------"
+echo "Starting..."
+
+mkdir -p $HOME/Documents/EvernoteBackups
+
+log=$HOME/Documents/EvernoteBackups/backup.log
+
+d=$(dirname $0)
+
+osascript $d/export.scpt 2>&1 | tee $log
+
+grep -q "Ended: " $log
+if [ $? -eq 0 ]
+then
+  echo "Success"
+  exit 0
+else
+  echo "ERROR detected"
+  exit 1
+fi
